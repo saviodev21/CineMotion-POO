@@ -1,0 +1,763 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Open+Sans:wght@400;700&family=Oswald:wght@500&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'inter', sans-serif;
+	align-items: center;
+}
+
+:root{
+    --white:#fff;
+    --red: #d30606;
+	--button:#ea1538;
+    --grey:#808080;
+    --black:(#000000);
+	--background: rgba(10,23,55,0.5);
+	--background-table: rgb(11, 11, 11);
+}
+
+html{
+	max-width: 100vw;
+	max-height: 100vh;
+	/*deixando o tamanho padrão da fonte do navegador em 10px, para poder usar o REM*/
+    font-size: 62.5%; /*10px*/
+}
+
+body{
+	height: 100vh;
+	width: 100%;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("imagens/backgroundIndex.jpg");
+	background-position: center;
+	background-size: cover;
+}
+
+
+nav{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 4rem;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+.logo{
+	color: var(--white);
+	font-size: 2.8rem;
+}
+.logo a{
+	text-decoration: none;
+	color: var(--white);
+}
+
+span{
+	color: var(--button);
+}
+
+nav ul li{
+	list-style-type: none;
+	display: inline-block;
+	padding: 1rem 2rem;
+}
+
+nav ul li a{
+	color: var(--white);
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 1.6rem;
+}
+
+nav ul li a:hover{
+	color: var(--button);
+	transition: .3s;
+	
+}
+
+button{
+	border: none;
+	background-color: var(--button);
+	padding: 1.2rem 2rem;
+	border-radius: 1rem;
+	transition: .1s;
+	color: var(--white);
+	font-size: 1.4rem;
+}
+button a{
+	text-decoration: none;
+	color: var(--white);
+	font-weight: bold;
+	font-size: 1.5rem;
+}
+
+button:hover{
+	background-color: var(--red);
+	transform: scale(1.1);
+	cursor: pointer;
+}
+
+/*titulo grande da tela inicial*/
+#cineMotion{
+	text-align: center;
+	font-size: 8rem;
+	padding-top: 4rem;
+	color: var(--white);
+}
+
+section{
+	padding-top: 5rem;
+}
+
+/*botões da tela inicial, cadastrar/filmes em cartaz*/
+.botao{
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	padding-left: 30rem;
+	padding-right: 30rem;
+	padding-top: 10rem;
+}
+
+.botao a{
+	text-decoration: none;
+	color: var(--white);
+}
+
+/*formulários de cadastro de filmes*/
+.formulario{
+	background-color: var(--background);
+	display: flex;
+	flex-direction: column;
+	border-radius: 1rem;
+	gap: 3rem;
+	box-shadow: .5rem .5rem .8rem rgba(0,0,0,0.336); 
+	height: 65rem;
+	max-width: 77rem;
+	align-items: center;
+
+	padding-left: 9rem;
+	padding-right: 9rem;
+	justify-content: center;
+
+	margin: 0 auto; /* Centraliza o formulário na página */
+}
+/*formulários de cadastro de sessao e de cliente*/
+.formulario2{
+	background-color: var(--background);
+	display: flex;
+	flex-direction: column;
+	border-radius: 1rem;
+	gap: 3rem;
+	box-shadow: .5rem .5rem .8rem rgba(0,0,0,0.336); 
+	height: 60rem;
+	max-width: 77rem;
+	align-items: center;
+
+	padding-left: 9rem;
+	padding-right: 9rem;
+	justify-content: center;
+
+	margin: 0 auto; /* Centraliza o formulário na página */
+}
+
+.input-group{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.input-box{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin-bottom: 0.8rem;
+
+	align-items: flex-start;
+}
+
+.input-box input{
+	font-size: 1.4rem;
+	margin: 0.6rem 0;
+	padding: 2rem 2rem;
+	border: none;
+	border-radius: 1rem;
+	box-shadow: 1px 1px 6px #0000001c;
+
+	width: 25rem;
+	height: 4rem;
+}
+
+.input-box input:hover{
+	background-color: #eeeeee75;
+	
+}
+
+.input-box input:focus-visible{
+	outline: 1px solid #6c63ff;
+}
+
+.input-box input::placeholder{
+	color: #000000be;
+}
+
+/*taamanho dos inputs de Filme e Sessão*/
+.caixinhas{
+	width: 25rem;
+	height: 4rem;
+}
+.caixinhas2{
+	width: 19rem;
+	height: 4rem;
+}
+
+/*do formulário de cadastro de clientes*/
+#sexo{
+	width: 10rem;
+	height: 4;
+}
+
+.input-box label{
+	font-size: 1.6rem;
+	
+	color: var(--white);
+	font-weight: 600;
+}
+
+.form-image img{
+	width: 31rem;
+}
+
+.form {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: var(--grey);
+	padding: 3rem;
+}
+
+.form-header{
+	display: flex;
+	justify-content: center;
+	
+	font-size: 1.4rem;
+	color: var(--button);
+}
+
+
+#form_header h1{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#form_header h1{
+	position: relative;
+	font-size: 3rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	color: var(--white);
+}
+
+#form_header h1::before{
+	position: absolute;
+	content: '';
+	width: 40%;
+	background-color: var(--button);
+	height: .3rem;
+	bottom: 1rem;
+	border-radius: .5rem;
+}
+
+
+.login-button{
+	display: flex;
+	align-items:center;
+}
+
+.login-button button{
+	border: none;
+	background-color: var(--button);
+	padding: 0.4rem 1rem;
+	border-radius: .5rem;
+	cursor: pointer;
+}
+
+.login-button button:hover{
+	background-color: #6b53fff1;
+}
+
+.login-button button a {
+	text-decoration: none;
+	font-weight: 500;
+	color: var(--white);
+}
+
+.form-header h1::after{
+	content: "";
+	display: block;
+	width: 5rem;
+	height: 0.3rem;
+	background-color: var(--white);
+	margin: 0 auto;
+	position: absolute;
+	border-radius: 10px;
+	color: var(--red);
+	
+}
+
+.continue-button button{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	margin-top: 2.5rem;
+	border: none;
+	background-color: var(--button);
+	border-radius: .5rem;
+	cursor: pointer;
+	height: 4rem;
+	width: 11rem;
+	color: var(--white);
+	font-size: 1.6rem;
+}
+
+/*iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii*/
+.container-principal-voltar{
+	display: flex;
+	justify-content: space-between;	
+}
+
+.continue-button button:hover{
+	background-color: var(--red);
+}
+
+.continue-button button a{
+	text-decoration: none;
+	font-size: 0.93rem;
+	font-weight: 500;
+	color: var(--white);
+}
+
+@media screen and(max-width: 1330){
+	.form-image{
+		display: none;
+	}
+	.container{
+		width: 50%;
+	}
+	.form{
+		width: 100%;
+	}
+}
+
+.hero{
+	max-height: 100vh;
+	max-width: 100%;
+
+}
+
+/*tela de cadastrar clientes*/
+.container{
+	display: flex;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+	box-shadow: 5px 5px 10px rgba(0,0,0,.212);
+	align-items: center;	
+}
+
+/*tela de login e index*/
+#container{
+	height: 80vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container-gerencia{
+	display: flex;
+	width: 100vw;
+	align-items: center;
+	justify-content: center;
+}
+
+.container-table{
+	display: flex;
+	justify-content: center;
+}
+
+.card{
+	border-top: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 4rem 4rem 7.5rem 4rem rgba(0, 0, 0, 0.4);
+    padding: 4rem;
+    margin: 1.5rem;
+    width: 25rem;
+    height: 60rem;
+    transition: all 0.1s ease-out;
+    padding-top: 3rem;
+    cursor: pointer;
+    background-color: rgba(10,23,55,0.5);
+}
+
+.imag{
+	max-width: 20.4rem;
+    max-height: 25.4rem;
+	border-radius: 1rem;
+}
+
+.text-main{
+	text-align: center;
+	font-weight: 60rem;
+	font-size: 2.5rem;
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #F5F5DC;
+}
+.imagem:hover{
+	-webkit-transform: scale(1);
+	transform: scale(1.1);
+	transition: 1s;
+}
+
+
+.desc{
+	text-align: center;
+	font-size: 1rem;
+	color: var(--white);
+    font-size: 1.5rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.btn{
+	padding: .8rem 4rem;
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.5rem;
+	font-weight: 500;
+	border-radius: 1rem;
+	border: none;
+	transition: 1s;
+	background: var(--button);
+	color: var(--white);
+	
+}
+
+.btn2{
+	padding: 1.2rem 3rem;
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.8rem;
+	font-weight: 500;
+	border-radius: 1rem;
+	border: none;
+	transition: 1s;
+	color: var(--white);
+}
+
+.btn:hover{
+	transition: 1s;
+	background: var(--red);
+}
+
+.btn2:hover{
+	transition: 1s;
+	background: #ea1538;
+	color: var(--white);
+}
+.button{
+	display: flex;
+	justify-content: center;
+	margin-top: 3rem;
+
+}
+.button2{
+	padding-top: 2rem;
+	display: flex;
+	justify-content: center;
+	margin-top: 1rem;
+}
+
+/*formulário de login*/
+#login_form{
+	background-color: var(--background);
+	display: flex;
+	flex-direction: column;
+	padding: 6rem 8.5rem;
+	border-radius: .8rem;
+	gap: 3rem;
+	box-shadow: .5rem .5rem .8rem rgba(0,0,0,0.336); 
+	height: fit-content;
+	align-items: center;
+}
+
+/*formulário de comprar ingresso*/
+#compraIngresso-form{
+	background-color: var(--background);
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	padding: 6rem 8.5rem;
+	border-radius: .8rem;
+	gap: 3rem;
+	box-shadow: .5rem .5rem .8rem rgba(0,0,0,0.336); 
+	height: 60rem;
+	width: 80rem;
+	align-items: center;
+}
+
+
+#login-button{
+	color: var(--white);
+	border: none;
+	background: var(--button);
+	padding: .7rem;
+	font-size: 1.4rem;
+	border-radius: .5rem;
+	font-weight: bold;
+	cursor: pointer;
+	width: 11rem;
+	height: 4rem;
+}
+
+#login-button:hover{
+	background-color: var(--red);
+}
+
+
+.container2{
+	display: flex;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+	
+}
+/*container de d*/
+.container-descricao{
+	width: 79rem;
+	height: 56rem;
+	background-color: var(--background);
+	border-radius: 1.5rem;
+	/*margin-top: 2rem;*/
+	margin-bottom: 1rem;
+	box-shadow: rgba(0,0,0,0.5) 0px 1.9rem 3.8rem, rgba(0,0,0,0.5) 0px 1.5rem 1.2rem;
+}
+
+.image{
+	display: flex;
+	justify-content: space-between;
+	width: 88rem;
+	height: 55rem;
+	padding-left: 3rem;
+	padding-right: 12rem;	
+}
+/*container do botão voltar da página de descrição do filme*/
+.button3{
+	display: flex;
+	justify-content: center;
+	padding-left: 8rem;
+}
+
+.btn3{
+	padding: 1rem 3rem;
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.6rem;
+	font-weight: 500;
+	border-radius: 1rem;
+	border: none;
+	background-color: var(--button);
+	color: var(--white);
+	cursor: pointer;
+}
+
+.btn3:hover{
+	transition: 1s;
+}
+
+.images{
+	max-width: 20.4rem;
+    max-height: 25.4rem;
+	border-radius: 1rem;
+	margin-top: 2rem;
+}
+
+.text-main2{
+	text-align: center;
+	font-weight: 60rem;
+	font-size: 2.5rem;
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ff0000;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.desc2{
+	font-family: 'Poppins', sans-serif;
+	color: var(--white);
+	font-weight: 300;
+	font-size: 1.6rem;
+	text-align: left;
+	margin-left: 2rem
+}
+
+/*Continuar compra/comfirmar compra*/
+.button-compra{
+	color: var(--white);
+	border: none;
+	padding: .7rem;
+	font-size: 1.4rem;
+	border-radius: .5rem;
+	font-weight: bold;
+	cursor: pointer;
+	width: 15rem;
+	height: 4.8rem;
+}
+
+#login-button:hover{
+	transform: scale(1.2);
+}
+
+#table{
+	border-collapse: collapse;
+	width: 80%;
+	align-items: center;
+	margin: 0 auto;
+	margin-top: 8rem;
+	table-layout: auto;
+	text-align: center;
+}
+
+.th{
+	border: 1px solid var(--white);
+	background-color: var(--button);
+	text-align: center;
+	padding: 1rem;
+	width: auto;
+	margin: 0 auto;
+	padding: .7em;
+	font-size: 1.5rem;
+	color: var(--white);
+}
+
+.td{
+	border: 1px solid var(--white);
+	padding: .7rem;
+	text-align: center;
+	font-size: 1.4rem;
+	color: var(--white);
+	background: var(--background-table);
+}
+
+
+/*container do botão novo contato/nova sessão*/
+.container-button{
+	width: 80%;
+	display: flex;
+	margin-top: 2.5rem;
+	
+}
+
+/*deixar o botão novo contato/nova sessao mais para direita*/
+#novo-button{
+	margin-left: 22rem;
+}
+#button-lista{
+	border-radius: 1rem;
+	background-color: var(--button);
+	border: none;
+	padding: 1.2rem 2rem;
+	transition: .4s;
+}
+
+/*botões de baixo do formulário de cadastro/login*/
+.container-voltar{
+	display: flex;
+	justify-content: space-between;
+	
+	margin-top: 3rem;
+}
+
+#voltar-login{
+	text-decoration: none;
+	color: var(--white);
+	font-size: 1.6rem;
+	background-color: var(--button);
+	border-radius: .8rem;
+	
+	width: 21rem;
+	height: 4rem;
+	margin-bottom: 1rem;
+	margin-left: 12rem;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+#voltar-login:hover{
+	background-color: var(--red);
+	transition: 1s;
+}
+
+#voltar{
+	text-decoration: none;
+	color: var(--white);
+	font-size: 1.6rem;
+
+	background-color: var(--button);
+	border-radius: .8rem;
+	width: 9rem;
+	height: 4rem;
+	margin-bottom: 1rem;
+	margin-right: 12rem;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#voltar-sessao{
+	color: var(--white);
+	font-size: 1.6rem;
+
+	background-color: var(--button);
+	border-radius: .8rem;
+	width: 11rem;
+	height: 4rem;
+	margin-bottom: -2rem;
+	margin-right: 12rem;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#voltar-sessao:hover{
+	background-color: var(--red);
+	transition: 2s; 
+}
+.container-voltar-filme{
+	padding-bottom: 1rem;
+	padding-left: 14rem;
+}
+
+.texto2{
+	padding-right: 10px;
+	padding-left: 50px;
+}
+
+.texto{
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+.botao-principal-voltar{
+	margin-right: 375px;
+}
+
+.continue-button{
+	margin-left: 1px;
+	margin-top: 25px;
+}
